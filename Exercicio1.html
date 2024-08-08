@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Paridade de um Número Inteiro</title>
+</head>
+<body>
+    <h1>Verificar Paridade de um Número Inteiro</h1>
+    <p>Digite um número inteiro: <input type="number" id="numeroInput" /></p>
+    <button onclick="verificarParidade()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarParidade() {
+            // Obtém o valor digitado pelo usuário
+            let numero = parseInt(document.getElementById("numeroInput").value);
+
+            // Verifica se o número é par ou ímpar  
+            if (numero % 2 == 0) {
+                document.getElementById("resultado").textContent = "O número é par.";
+            } else {
+                document.getElementById("resultado").textContent = "O número é ímpar.";
+            }
+        }
+    </script>
+</body>
+</html>

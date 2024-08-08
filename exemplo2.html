@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Dados em JavaScript</title>
+</head>
+<body>
+    <h1>Tipos de Dados em JavaScript</h1>
+    <div id="saida"></div>
+
+    <script>
+        // Tipos Primitivos
+
+        // Número inteiro
+        let numeroInteiro = 42;
+        // Número de ponto flutuante
+        let numeroFlutuante = 3.14;
+        // Número longo usando BigInt
+        let numeroLongo = 1234567890123456789012345678901234567890n;
+        // String simples
+        let texto = "Olá, mundo!";
+        // String multilinha usando template literals
+        let textoMultilinha = `Esta é uma string
+        multilinha com \``;
+        // Booleano (verdadeiro ou falso)
+        let verdadeiroOuFalso = true;
+        // Undefined (variável declarada mas não inicializada)
+        let indefinido;
+        // Null (ausência intencional de um valor)
+        let nulo = null;
+        // Symbol (valor único e imutável)
+        let simbolo = Symbol('descricao');
+
+        // Tipos Complexos
+
+        // Objeto
+        let objeto = { chave: "valor", numero: 42 };
+        // Array (lista ordenada de valores)
+        let array = [1, 2, 3, 4, 5];
+
+        // Exibindo valores no console
+        console.log(`Número Inteiro: ${numeroInteiro}`);
+        console.log(`Número Flutuante: ${numeroFlutuante}`);
+        console.log(`Número Longo: ${numeroLongo}`);
+        console.log(`Texto: ${texto}`);
+        console.log(`Texto Multilinha: ${textoMultilinha}`);
+        console.log(`Booleano: ${verdadeiroOuFalso}`);
+        console.log(`Indefinido: ${indefinido}`);
+        console.log(`Nulo: ${nulo}`);
+        console.log(`Símbolo: ${simbolo.toString()}`);
+        console.log(`Objeto: ${JSON.stringify(objeto)}`);
+        console.log(`Array: ${array}`);
+
+        // Exibindo valores no corpo da página
+        document.getElementById("saida").innerHTML = `
+            <p><strong>Número Inteiro:</strong> ${numeroInteiro}</p>
+            <p><strong>Número Flutuante:</strong> ${numeroFlutuante}</p>
+            <p><strong>Número Longo:</strong> ${numeroLongo}</p>
+            <p><strong>Texto:</strong> ${texto}</p>
+            <p><strong>Texto Multilinha:</strong> ${textoMultilinha}</p>
+            <p><strong>Booleano:</strong> ${verdadeiroOuFalso}</p>
+            <p><strong>Indefinido:</strong> ${indefinido}</p>
+            <p><strong>Nulo:</strong> ${nulo}</p>
+            <p><strong>Símbolo:</strong> ${simbolo.toString()}</p>
+            <p><strong>Objeto:</strong> ${JSON.stringify(objeto)}</p>
+            <p><strong>Array:</strong> ${array}</p>
+        `;
+    </script>
+</body>
+</html>

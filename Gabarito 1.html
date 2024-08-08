@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolha de Nota Musical</title>
+</head>
+<body>
+    <h1>Escolha uma nota musical</h1>
+    <p>1 - Dó (C)</p>
+    <p>2 - Ré (D)</p>
+    <p>3 - Mi (E)</p>
+    <p>4 - Fá (F)</p>
+    <p>5 - Sol (G)</p>
+    <p>6 - Lá (A)</p>
+    <p>7 - Si (B)</p>
+    <input type="number" id="notaInput" min="1" max="7" />
+    <button onclick="escolherNota()">Escolher Nota</button>
+    <p id="resultadoNota"></p>
+
+    <script>
+        function escolherNota() {
+            let nota = parseInt(document.getElementById("notaInput").value);
+            let resultado = "";
+            let resposta;
+
+            switch (nota) {
+                case 1:
+                    resultado = "Dó (C) tem frequência de aproximadamente 261.63 Hz";
+                    if (confirm("Gostaria de saber a nota em sustenido?")) {
+                        resultado += "<br>Dó Sustenido (C#) tem frequência de aproximadamente 277.18 Hz";
+                    }
+                    break;
+                case 2:
+                    resultado = "Ré (D) tem frequência de aproximadamente 293.66 Hz";
+                    if (confirm("Gostaria de saber a nota em sustenido?")) {
+                        resultado += "<br>Ré Sustenido (D#) tem frequência de aproximadamente 311.13 Hz";
+                    }
+                    break;
+                case 3:
+                    resultado = "Mi (E) tem frequência de aproximadamente 329.63 Hz";
+                    if (confirm("Gostaria de saber a nota em sustenido?")) {
+                        resultado += "<br>Mi não tem nota sustenida";
+                    }
+                    break;
+                case 4:
+                    resultado = "Fá (F) tem frequência de aproximadamente 349.23 Hz";
+                    if (confirm("Gostaria de saber a nota em sustenido?")) {
+                        resultado += "<br>Fá Sustenido (F#) tem frequência de aproximadamente 369.99 Hz";
+                    }
+                    break;
+                case 5:
+                    resultado = "Sol (G) tem frequência de aproximadamente 392.00 Hz";
+                    if (confirm("Gostaria de saber a nota em sustenido?")) {
+                        resultado += "<br>Sol Sustenido (G#) tem frequência de aproximadamente 415.30 Hz";
+                    }
+                    break;
+                case 6:
+                    resultado = "Lá (A) tem frequência de aproximadamente 440.00 Hz";
+                    if (confirm("Gostaria de saber a nota em sustenido?")) {
+                        resultado += "<br>Lá Sustenido (A#) tem frequência de aproximadamente 466.16 Hz";
+                    }
+                    break;
+                case 7:
+                    resultado = "Si (B) tem frequência de aproximadamente 493.88 Hz";
+                    if (confirm("Gostaria de saber a nota em sustenido?")) {
+                        resultado += "<br>Si não tem nota sustenida";
+                    }
+                    break;
+                default:
+                    resultado = "Nota não reconhecida.";
+                    break;
+            }
+
+            document.getElementById("resultadoNota").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela de Multiplicação</title>
+</head>
+<body>
+    <h1>Gerar a Tabela de Multiplicação</h1>
+    <p>Digite um número inteiro positivo:</p>
+    <input type="number" id="numeroMultiplicacao" min="1" />
+    <button onclick="gerarTabela()">Gerar Tabela</button>
+    <div id="resultadoTabela"></div>
+
+    <script>
+        function gerarTabela() {
+            let num = parseInt(document.getElementById("numeroMultiplicacao").value);
+            let resultado = "<table border='1'><tr><th>Multiplicação</th><th>Resultado</th></tr>";
+
+            for (let i = 1; i <= 10; i++) {
+                resultado += "<tr><td>" + num + " x " + i + "</td><td>" + (num * i) + "</td></tr>";
+            }
+
+            resultado += "</table>";
+            document.getElementById("resultadoTabela").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

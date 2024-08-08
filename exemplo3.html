@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Dados Complexos em JavaScript</title>
+</head>
+<body>
+    <h1>Tipos de Dados Complexos em JavaScript</h1>
+    <div id="saida"></div>
+
+    <script>
+        // Tipos Complexos
+
+        // Classe
+        class Pessoa {
+            constructor(nome, idade) {
+                this.nome = nome;
+                this.idade = idade;
+            }
+
+            saudacao() {
+                return `Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos.`;
+            }
+        }
+        // Instância de uma classe
+        let pessoa = new Pessoa("João", 30);
+
+        // Map (coleção de chave-valor)
+        let mapa = new Map();
+        mapa.set("chave1", "valor1");
+        mapa.set("chave2", "valor2");
+
+        // Set (coleção de valores únicos)
+        let conjunto = new Set();
+        conjunto.add(1);
+        conjunto.add(2);
+        conjunto.add(3);
+
+        // Date (data e hora)
+        let dataAtual = new Date();
+
+        // JSON (JavaScript Object Notation)
+        let json = JSON.stringify({ chave: "valor", numero: 42 });
+
+        // Function
+        function soma(a, b) {
+            return a + b;
+        }
+
+        // Exibindo valores no console
+        console.log(`Pessoa: ${pessoa.saudacao()}`);
+        console.log(`Map: ${JSON.stringify([...mapa])}`);
+        console.log(`Set: ${JSON.stringify([...conjunto])}`);
+        console.log(`Data Atual: ${dataAtual}`);
+        console.log(`JSON: ${json}`);
+        console.log(`Função soma(2, 3): ${soma(2, 3)}`);
+
+        // Exibindo valores no corpo da página
+        document.getElementById("saida").innerHTML = `
+            <p><strong>Pessoa:</strong> ${pessoa.saudacao()}</p>
+            <p><strong>Map:</strong> ${JSON.stringify([...mapa])}</p>
+            <p><strong>Set:</strong> ${JSON.stringify([...conjunto])}</p>
+            <p><strong>Data Atual:</strong> ${dataAtual}</p>
+            <p><strong>JSON:</strong> ${json}</p>
+            <p><strong>Função soma(2, 3):</strong> ${soma(2, 3)}</p>
+        `;
+    </script>
+</body>
+</html>

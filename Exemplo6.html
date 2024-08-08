@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Soma dos Números de 1 a N</title>
+</head>
+<body>
+    <h1>Soma dos Números de 1 a N</h1>
+    <p>Digite um número inteiro positivo:</p>
+    <input type="number" id="numeroInput" min="1" />
+    <button onclick="calcularSoma()">Calcular Soma</button>
+    <p id="resultadoSoma"></p>
+
+    <script>
+        function calcularSoma() {
+            let N = parseInt(document.getElementById("numeroInput").value);
+            let soma = 0;
+
+            for (let i = 1; i <= N; i++) {
+                soma += i;
+            }
+
+            document.getElementById("resultadoSoma").textContent = "A soma dos números de 1 a " + N + " é: " + soma;
+        }
+    </script>
+</body>
+</html>

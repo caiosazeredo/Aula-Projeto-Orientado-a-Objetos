@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tradução de Cores</title>
+</head>
+<body>
+    <h1>Escolha uma cor para traduzir</h1>
+    <p>1 - Vermelho</p>
+    <p>2 - Azul</p>
+    <p>3 - Verde</p>
+    <p>4 - Amarelo</p>
+    <p>5 - Roxo</p>
+    <input type="number" id="corInput" min="1" max="5" />
+    <button onclick="traduzirCor()">Traduzir Cor</button>
+    <p id="resultadoCor"></p>
+
+    <script>
+        function traduzirCor() {
+            let escolha = parseInt(document.getElementById("corInput").value);
+            let resultado;
+
+            switch (escolha) {
+                case 1:
+                    resultado = "Vermelho em inglês é: Red";
+                    break;
+                case 2:
+                    resultado = "Azul em inglês é: Blue";
+                    break;
+                case 3:
+                    resultado = "Verde em inglês é: Green";
+                    break;
+                case 4:
+                    resultado = "Amarelo em inglês é: Yellow";
+                    break;
+                case 5:
+                    resultado = "Roxo em inglês é: Purple";
+                    break;
+                default:
+                    resultado = "Cor não reconhecida.";
+                    break;
+            }
+
+            document.getElementById("resultadoCor").textContent = resultado;
+        }
+    </script>
+</body>
+</html>

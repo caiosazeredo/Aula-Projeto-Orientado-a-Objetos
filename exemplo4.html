@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo com If em JavaScript</title>
+</head>
+<body>
+    <h1>Exemplo com If em JavaScript</h1>
+    <p>Digite um número: <input type="number" id="numeroInput" /></p>
+    <button onclick="verificarNumero()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            // Obtém o valor digitado pelo usuário
+            let numero = parseInt(document.getElementById("numeroInput").value);
+
+            // Verifica se o número é positivo
+            if (numero > 0) {
+                document.getElementById("resultado").textContent = "O número é positivo.";
+            } else {
+                document.getElementById("resultado").textContent = "O número não é positivo.";
+            }
+        }
+    </script>
+</body>
+</html>

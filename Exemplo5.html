@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Intervalo de um Número Inteiro com Switch</title>
+</head>
+<body>
+    <h1>Verificar Intervalo de um Número Inteiro com Switch</h1>
+    <p>Digite um número inteiro: <input type="number" id="numeroInput" /></p>
+    <button onclick="verificarIntervalo()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarIntervalo() {
+            // Obtém o valor digitado pelo usuário
+            let numero = parseInt(document.getElementById("numeroInput").value);
+
+            // Verifica em qual intervalo o número se encontra usando switch
+            let mensagem;
+
+            switch (true) {
+                case (numero < 0):
+                    mensagem = "O número é menor que 0.";
+                    break;
+                case (numero >= 0 && numero <= 10):
+                    mensagem = "O número está entre 0 e 10.";
+                    break;
+                case (numero >= 11 && numero <= 20):
+                    mensagem = "O número está entre 11 e 20.";
+                    break;
+                case (numero > 20):
+                    mensagem = "O número é maior que 20.";
+                    break;
+                default:
+                    mensagem = "Entrada inválida.";
+            }
+
+            // Exibe a mensagem no corpo da página
+            document.getElementById("resultado").textContent = mensagem;
+        }
+    </script>
+</body>
+</html>
